@@ -1,63 +1,15 @@
 
-
-// function Video(){
-
-//     return <div>video</div>
-// }
-
-// export default Video;
-
-
 import './Video.css'
 
-// function Video(){
-//      let bg = 'dark';
-//     return (
-//         <>
-//             <img
-//               src="https://i.imgur.com/MK3eW3Am.jpg"
-//               alt="Katherine Johnson"
-//             />
-//             <div className={bg} style={{backgroundColor:'red'}}>React Js Tutorials</div>
-//         </>
-//     )
-// }
 
-
-
-// function Video(props){
-//     console.log(props)
-//     let bg = 'dark'
-//    return (
-//        <>
-//            <img
-//              src="https://i.imgur.com/MK3eW3Am.jpg"
-//              alt="Katherine Johnson"
-//            />
-//            <div className={bg} style={{backgroundColor:'red'}}>{props.title}</div>
-//        </>
-//    )
-// }
-
-
-//props ka ye prefrable way nhi h to distrucring way use karnge
-
-// function Video({title, bgColor}){
-//     let bg = 'dark'
-//    return (
-//        <>
-//            <img
-//              src="https://i.imgur.com/MK3eW3Am.jpg"
-//              alt="Katherine Johnson"
-//            />
-//            <div className={bg} style={{backgroundColor:bgColor}}>{title}</div>
-//        </>
-//    )
-// }
-
-
-function Video({title, channel, views, time}){
-    let bg = 'dark'
+function Video({title,id, channel, views, time,verified}){
+//    let channelJSX;
+//    if(verified){
+//     channelJSX = <div className='channel'>{channel}☑️</div>
+//    }else {
+//     channelJSX = <div className='channel'>{channel}</div>
+//    }
+   
    return (
        <>
        <div className='container'>
@@ -69,9 +21,13 @@ function Video({title, channel, views, time}){
        </div>
            
            <div className="title">{title}</div>
-           <div className='channel'>{channel}</div>
-           <div className='views'>
+           {/* {verified ? channelJSX = <div className='channel'>{channel}☑️</div>
+           :channelJSX = <div className='channel'>{channel}</div>} */}
+           {/* <div className='channel'>{channel} {verified ? '☑️': null}</div> */}
+           <div className='channel'>{channel} {verified && '☑️'}</div>
+           <div className='views'> 
             {views} views <span>.</span> {time}
+            {/* {channelJSX} */}
            </div>
            </div>
        </>

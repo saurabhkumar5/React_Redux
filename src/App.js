@@ -1,69 +1,7 @@
 import Video from "./components/Video";
 import "./App.css";
 import videos from "./data/Data";
-
-
-// function App() {
-
-//   let obj = {
-//     title:"react js",
-//     views:"10M",
-//     time:"1 year ago",
-//     channel:"attract with physics",
-//     verified: true
-//   }
-//   return (
-//     <div className="App">
-//       <div>saurabh</div>
-//       <Video {...obj}/>
-//       <Video
-//         verified={false}
-//         title="node js"
-//         views="100k"
-//         time="1 week ago"
-//         channel="attract with physics"
-//       />
-//       <Video
-//         title="express js"
-//         views="150k"
-//         time="2 days ago"
-//         channel="attract with physics"
-//       />
-//       <Video
-//         title="mongo db"
-//         views="15k"
-//         time="2 days ago"
-//         channel="attract with physics"
-//       />
-//       <Video
-//         title="express js"
-//         views="150k"
-//         time="2 days ago"
-//         channel="attract with physics"
-//       />
-//       <Video
-//         title="express js"
-//         views="150k"
-//         time="2 days ago"
-//         channel="attract with physics"
-//       />
-//       <Video
-//         title="express js"
-//         views="150k"
-//         time="2 days ago"
-//         channel="attract with physics"
-//       />
-//       <Video
-//         verified={false} 
-//         title="express js"
-//         views="150k"
-//         time="2 days ago"
-//         channel="attract with physics"
-//       />
-//     </div>
-//   );
-// }
-
+import PlayButton from "./components/PlayButton";
 
 
 
@@ -82,6 +20,14 @@ function App() {
           id = {video.id}
         />)
       }
+      <div style={{clear:'both'}}>
+      {/* <PlayButton name="play" message="play-msg"></PlayButton>
+      <PlayButton name="pause" message="pause-msg"></PlayButton> */}
+
+      <PlayButton message="play-msg" onClick={()=>console.log('playyy')}>play</PlayButton>
+      <PlayButton message="pause-msg" onClick={()=>alert('playyyy')}>pause</PlayButton>
+      </div>
+      
       
     </div>
   );

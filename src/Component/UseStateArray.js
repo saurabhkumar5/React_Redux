@@ -10,10 +10,10 @@ const UseStateArray = () => {
             id:1,myname:'kumar', age:24
         },
         {
-            id:0,myname:'saurabh', age:23
+            id:2,myname:'saurabh', age:23
         },
         {
-            id:1,myname:'kumar', age:24
+            id:3,myname:'kumar', age:24
         }
     ]
 
@@ -22,18 +22,27 @@ const UseStateArray = () => {
     const clearArray = ()=>{
         setmyArray([]);
     }
+    const removeElem = (id)=>{
+        const myNewArray = myArray.filter((curElem)=>{
+            return curElem.id!==id;
+        })
+        setmyArray(myNewArray);
+    }
 
   return (
     <>
-        {/* {biodata.map((value)=>{
-            return <h1>name: {value.myname} && age: {value.age}</h1>
-        })}
-        <button onClick={clearArray}>clear</button> */}
 
         {myArray.map((value)=>{
-            return <h1>name: {value.myname} && age: {value.age}</h1>
+            return (
+            <h1>name: {value.myname} && age: {value.age}
+            <button onClick={()=>removeElem(value.id)}>remove</button>
+            </h1>
+            
+            );
         })}
+        
         <button onClick={clearArray}>clear</button>
+        
     </>
   )
 }

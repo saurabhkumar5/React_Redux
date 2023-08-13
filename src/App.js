@@ -3,8 +3,15 @@ import './App.css';
 const App = () => {
 
   const [myname,setMyname] = useState('saurabh')
+
   function handle(){
-    setMyname('sumit')
+    let value = myname;
+    if(value==='saurabh'){
+      setMyname('sumit')
+    }else{
+      setMyname('saurabh')
+    }
+    
   }
 
   return (

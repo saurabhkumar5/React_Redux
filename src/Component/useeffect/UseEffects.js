@@ -37,7 +37,7 @@ const UseEffects = () => {
         }else{
             document.title = `Chats `
         }
-    })
+    },[count])
 
      console.log("hello outside")
 

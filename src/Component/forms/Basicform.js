@@ -11,6 +11,8 @@ const Basicform = () => {
         const newEntry = {email: email, password: password}
 
         setallEntry([...allEntry, newEntry]);
+        setEmail("");
+        setPassword("");
   }
   return (
     <>
